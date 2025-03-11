@@ -1,10 +1,10 @@
 // @ts-check
 const {test, expect} = require('@playwright/test');
-const {CreateAccountPage} = require('./page-object-models/createAccount.page');
+const {CreateAccountPage} = require('../page-object-models/createAccount.page');
 const {randomUUID} = require("crypto");
 
-const {REGISTER_PATH, EMAIL_PREFIX, EMAIL_DOMAIN, DEFAULT_TIMEOUT, SINGOUT_PATH} = require('./utils/constants');
-const {generateRandomUUIDEmail} = require("./utils/generator");
+const {REGISTER_PATH, EMAIL_PREFIX, EMAIL_DOMAIN, DEFAULT_TIMEOUT, SIGN_OUT_PATH} = require('../utils/constants');
+const {generateRandomUUIDEmail} = require("../utils/generator");
 
 test.beforeAll(async () => {
     console.log('Setting up before all tests in this file.');
@@ -145,7 +145,7 @@ test.describe('Email address', () => {
         await expect(createAccountPage.successMessage).toBeVisible();
         await expect(createAccountPage.successMessage).toContainText('We have sent a confirmation email to ' + email);
 
-        await page.goto(SINGOUT_PATH)
+        await page.goto(SIGN_OUT_PATH);
 
         await page.goto(REGISTER_PATH);
         createAccountPage = new CreateAccountPage(page);

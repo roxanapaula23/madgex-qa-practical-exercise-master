@@ -1,8 +1,8 @@
 const {test, expect} = require('@playwright/test');
-const {UserLoginPage} = require('./page-object-models/userLogin.page');
-const {CreateAccountPage} = require('./page-object-models/createAccount.page');
-const {generateRandomUUIDEmail} = require('./utils/generator');
-const {REGISTER_PATH, SIGN_OUT_PATH, DEFAULT_TIMEOUT} = require('./utils/constants');
+const {UserLoginPage} = require('../page-object-models/userLogin.page');
+const {CreateAccountPage} = require('../page-object-models/createAccount.page');
+const {generateRandomUUIDEmail} = require('../utils/generator');
+const {REGISTER_PATH, SIGN_OUT_PATH, DEFAULT_TIMEOUT} = require('../utils/constants');
 
 async function registerUser(page, createAccountPage, email, password) {
     await page.goto(REGISTER_PATH);
