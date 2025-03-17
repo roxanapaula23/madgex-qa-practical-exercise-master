@@ -1,35 +1,49 @@
-# QA Practical Exercise
+# QA Automation Project
 
-This project is intended to be the starting point for a practical exercise. The project uses Playwright and Javascript. I've written one test that tests jobseeker account creation. Prospective candidates will be asked to add more tests that cover the validation of the account creation form. Currently the test runs against AmericaJobboard.com.
+This project is designed for automated testing using Playwright and JavaScript. The test suite covers key functionalities, including jobseeker account creation, job alerts, and user login. Tests are executed against AmericaJobboard.com to ensure reliability and compliance with expected behaviors.
 
-# Prerequisites
+## Getting Started
 
-You will need to install Node 22 or later and install Node package manager (npm). This excercise been tested with node 22. You should be able to download it from https://nodejs.org/en/download NPM should be included by default.
+These instructions will get you a copy of the project up and running on your local machine for testing purposes.
 
-# How to setup and run the test
+### Prerequisites
+Before going further make sure that you have this tool installed on your machine:
+    
+- Node.js
 
-To run the tests simply `npm install` to install everything then run `npx playwright install` to install the browsers and finally run `npx playwright tests` to run the tests.
+### Cloning
 
-The tests currently run against AmericaJobboard.com
+First, clone the repository to your local machine:
+```sh
+  https://github.com/roxanapaula23/madgex-qa-practical-exercise-master.git
+```
+Access the project:
+```sh
+  cd madgex-qa-practical-exercise-master
+```
 
-# The Scenario 
+### Installation
 
-The developers are creating an account sign up page and have recently added validation to the account creation form.  
+Install dependencies:
+```sh
+  npm install
+```
 
-We need to add tests to cover the validation on the account creation form. 
+Install Playwright and required browsers:
+```sh
+  npx playwright install
+```
 
-We’d like you to take up the reins and progress the the test suite as much as you feel is enough to demonstrate your abilities. As a guide we’d allow 1-2 hours for this exercise, we’re not so much concerned with a ‘finished’ project, more a strong indication as to how you’ve tackled what you aimed to achieve.
+### Testing
 
-# Show report
-After running `npx playwright tests` you can check the reports by running: 
+Run the tests:
+```sh
+  npx playwright test
+```
+
+### Reporting
+After running `npx playwright test` you can check the reports by running: 
 ```sh
   npx playwright show-report
 ```
 
-# Bugs
-
-- **Password reset redirection after Account Creation**
-
-- **User remains logged in even when 'Keep me signed in' checkbox is unchecked**
-
-- **Incorrect generic error message for Mismatched Passwords**

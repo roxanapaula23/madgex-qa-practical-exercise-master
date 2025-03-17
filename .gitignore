@@ -5,3 +5,5 @@ node_modules/
 /playwright/.cache/
 .idea
 modules.xml
+allure-report/
+allure-results/
